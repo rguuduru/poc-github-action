@@ -18,9 +18,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
      - name: My first step
-       run: echo ONE!
-       run: echo github.event_name
-       run: echo github.event.action
-       run: echo TWO!
-       if: github.event_name == 'pull_request' && github.event.action == 'completed'
-       run: echo rguuduru approved
+       run: |
+        echo ONE!
+        echo github.event_name
+        echo github.event.action
+        echo TWO!
+        if: github.event_name == 'pull_request' && github.event.action == 'completed'
+        echo rguuduru approved
