@@ -20,4 +20,4 @@ jobs:
      - name: My first step
        # && github.event.action == 'completed'  && startsWith(github.event.review.body, 'QA PASS')
        if: ${{ github.event_name == 'pull_request_review' && github.event.action == 'submitted' && github.event.pull_request.user.login == 'rguuduru' }}
-       run: echo gullirocks approved
+       run: echo rguuduru user made a comment
