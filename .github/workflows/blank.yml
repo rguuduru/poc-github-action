@@ -18,6 +18,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
      - name: My first step
-       # && github.event.action == 'completed' 
-       if: ${{ github.event_name == 'pull_request_review' && github.event.action == 'completed' }}
+       # && github.event.action == 'completed'  && startsWith(github.event.review.body, 'QA PASS')
+       if: ${{ github.event_name == 'pull_request_review' && github.event.action == 'submitted' }}
        run: echo gullirocks approved
