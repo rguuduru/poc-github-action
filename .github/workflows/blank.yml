@@ -19,5 +19,5 @@ jobs:
     steps:
      - name: My first step
        # && github.event.action == 'completed' 
-       if: ${{ github.event_name == 'pull_request' }}
+       if: ${{ github.event_name == 'pull_request_review' }}
        run: echo gullirocks approved
