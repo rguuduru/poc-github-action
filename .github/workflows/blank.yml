@@ -20,8 +20,8 @@ jobs:
      - name: My first step
        run: |
         echo ONE!
-        echo github.event_name
-        echo github.event.action
+        echo ${github.event_name}
+        echo ${github.event.action}
         echo TWO!
-        if: github.event_name == 'pull_request' && github.event.action == 'completed'
+        if: ${github.event_name} == 'pull_request' && ${github.event.action} == 'completed'
         echo rguuduru approved
