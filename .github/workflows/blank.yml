@@ -18,5 +18,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
      - name: My first step
-       if: ${{ github.event_name == 'pull_request' && github.event.action == 'completed' }}
-       run: echo gullirocks approved
+       run: echo ONE!
+       run: echo github.event_name
+       run: echo github.event.action
+       run: echo TWO!
+       if: github.event_name == 'pull_request' && github.event.action == 'completed'
+       run: echo rguuduru approved
