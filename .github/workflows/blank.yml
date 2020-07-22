@@ -19,5 +19,5 @@ jobs:
     steps:
      - name: My first step
        # && github.event.action == 'completed'  && startsWith(github.event.review.body, 'QA PASS')
-       #if: ${{ github.event_name == 'pull_request_review' && github.event.action == 'completed' && github.event.pull_request.user.login == 'sumesh-sukumaran' }}
+       if: ${{ github.event_name == 'pull_request_review' && github.event.action == 'completed' && github.event.pull_request.user.login == 'rguuduru' }}
        run: echo github.event.action
